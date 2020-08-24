@@ -78,20 +78,27 @@
         // );
 
         // ----------third steps----------
+        // function App(props) {
+        //     console.log(props)
+        //     return (
+        //         <header>
+        //             My App
+        //         </header>
+        //     );
+        // }
+        // -----------fourth steps---------
+
         function App(props) {
-            console.log(props)
             return (
                 <header>
-                    My App
+                    {props.children}
                 </header>
             );
         }
-
         // Nested elements inside the App
         ReactDOM.render(
             <App className='my-class'>
-                <h1>Current Page Title!</h1>
-            </App>,
+                <h1>Current Page Title!</h1> </App>,
             document.querySelector('#application-root')
         );
 
