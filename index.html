@@ -78,14 +78,22 @@
         // );
 
         // ----------third steps----------
+        // function App(props) {
+        //    console.log(props)
+        //    return (
+        //        <header>
+        //            My App
+        //        </header>
+        //    );
+        //}
+
         function App(props) {
-            console.log(props)
-            return (
-                <header>
-                    My App
-                </header>
-            );
-        }
+                return (
+                    <header>
+                        {props.children}
+                    </header>
+                );
+            }
 
         // Nested elements inside the App
         ReactDOM.render(
