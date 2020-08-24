@@ -4,6 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <title>React Hello World</title>
+    <link rel="stylesheet" type="text/css" href="index.css">
 </head>
 
 <body>
@@ -17,7 +18,7 @@
     </script>
     <script type="text/babel">
 
-        function App() {
+        function App(props) {
             return (
                 <div>
                     <header>
@@ -30,7 +31,7 @@
 
                     <main>
                         <section id="introduction">
-                            <p>Hi I'm Sally I'm 25 and below this line you'll find more information about me.</p>
+                            <p>Hi I'm {props.children} I'm 25 and below this line you'll find more information about me.</p>
                         </section>
                         <br />
                         <section id="Education">
@@ -58,7 +59,7 @@
                         <section id="Contact-section">
                             <p>My contact information: </p>
                             <address id="Contact-info">
-                                <p>My name is Sally</p>
+                                <p>My name is {props.children}</p>
                                 <p>My email is: <a href="mailto://sally@IntenetExplorer.old">sally@IntenetExplorer.old</a></p>
                                 <p>My phone number is: <a href="tel:+34100572415">+34 100 57 24 15</a></p>
                             </address>
@@ -69,7 +70,9 @@
 
             )
         };
-        ReactDOM.render(<App />, document.querySelector('#application-root'));
+        ReactDOM.render(<App className="sally-name">
+        <h4>Sally</h4>
+        </App>, document.querySelector('#application-root'));
 
     </script>
 </body>
